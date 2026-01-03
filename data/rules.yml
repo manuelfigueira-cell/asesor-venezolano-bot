@@ -1,0 +1,37 @@
+# rules.yml (Versión corregida y sin conflictos)
+
+version: "3.1"
+
+rules:
+
+# Regla para el manejo de fallbacks de bajo nivel de confianza (NLU)
+- rule: Handle NLU Fallback
+  steps:
+    - intent: nlu_fallback
+    - action: action_default_fallback
+
+# Regla para el manejo de fallbacks del core (cuando no hay otra regla/historia que aplique)
+- rule: Handle Core Fallback
+  steps:
+    - action: action_default_fallback
+
+# Reglas para interacciones simples y universales
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: despedirse
+    - action: utter_despedirse
+
+- rule: Say hi anytime the user says hello
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+
+- rule: Say thanks anytime the user says thanks
+  steps:
+    - intent: agradecer
+    - action: utter_agradecer
+
+- rule: Handle out of scope questions
+  steps:
+    - intent: out_of_scope
+    - action: utter_default_fallback

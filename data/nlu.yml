@@ -1,0 +1,2000 @@
+version: "3.1"
+
+nlu:
+- intent: saludar
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - hey
+    - qué tal
+    - buen día
+    - saludos
+    - cómo estás
+    - epale
+    - qué más
+    - hello
+    - holis
+    - holi
+    - buenas
+    - saludos cordiales
+    - un gusto
+    - qué hay
+    - cómo te va
+    - buenass
+    - ey
+    - qué pasa
+    - cómo andas
+    - hola buenas
+    - qué honda
+    - buenas tardes necesito ayuda
+    - hola buen día tengo una consulta
+    - buenos días quisiera información
+
+- intent: despedirse
+  examples: |
+    - adiós
+    - chao
+    - hasta luego
+    - nos vemos
+    - bye
+    - me voy
+    - fue un placer
+    - te escribo luego
+    - hasta la próxima
+    - gracias por todo
+    - nos hablamos
+    - hasta pronto
+    - que estés bien
+    - cuídate
+    - hasta otro momento
+    - me retiro
+    - finalizar
+    - chao chao
+    - nos vemos luego
+    - hasta la vista
+    - hasta mañana
+    - suerte
+    - abur
+    - me despido
+    - ya tengo la información que necesitaba
+    - gracias por tu ayuda me voy
+    - perfecto eso era todo
+
+- intent: agradecer
+  examples: |
+    - gracias
+    - muchísimas gracias
+    - te lo agradezco
+    - mil gracias
+    - eres un crack
+    - muy amable
+    - te lo agradezco mucho
+    - excelente, gracias
+    - me ayudaste un montón
+    - perfect, thank you
+    - gracias por la ayuda
+    - te agradezco la información
+    - mil gracias por tu tiempo
+    - agradecido
+    - gracias por la orientación
+    - te pasaste
+    - eres el mejor
+    - muy agradecido
+    - te debo una
+    - gracias por responder
+    - aprecio tu ayuda
+    - gracias por la explicación tan clara
+    - te agradezco los detalles
+
+- intent: afirmar
+  examples: |
+    - sí
+    - claro
+    - por supuesto
+    - correcto
+    - exacto
+    - así es
+    - de acuerdo
+    - ok
+    - okay
+    - va
+    - dale
+    - perfecto
+    - entendido
+    - listo
+    - confirmo
+    - afirmativo
+    - si
+    - claro que sí
+    - por su puesto
+    - está bien
+    - bien
+    - acepto
+    - correcto quiero eso
+    - sí exactamente eso necesito
+    - de acuerdo continuemos
+
+- intent: negar
+  examples: |
+    - no
+    - para nada
+    - incorrecto
+    - no estoy de acuerdo
+    - negativo
+    - nada
+    - nunca
+    - jamás
+    - no gracias
+    - no quiero
+    - no me interesa
+    - no ahora
+    - después
+    - más tarde
+    - no por el momento
+    - no todavía
+    - no es correcto
+    - error
+    - falso
+    - no es así
+    - no eso no es lo que pregunté
+    - no me refiero a eso
+    - no es lo que busco
+
+- intent: solicitar_explicacion_detallada
+  examples: |
+    - explícame mejor
+    - necesito más detalles
+    - puedes profundizar
+    - dame más información
+    - amplía esa explicación
+    - no entendí completamente
+    - puedes ser más específico
+    - quiero entender mejor
+    - necesito que me expliques paso a paso
+    - desglosa ese proceso
+    - detalla más por favor
+    - cómo funciona exactamente
+    - cuéntame más al respecto
+    - necesito una guía completa
+    - quiero todos los detalles
+    - explica como si fuera la primera vez
+    - soy nuevo en esto explícame bien
+
+- intent: solicitar_ejemplo_practico
+  examples: |
+    - dame un ejemplo
+    - muéstrame un caso práctico
+    - tienes un ejemplo real
+    - ilustra con un caso
+    - muestra un ejemplo concreto
+    - ponme un ejemplo numérico
+    - ejemplifica por favor
+    - necesito ver un caso práctico
+    - puedes mostrarme con números
+    - un ejemplo venezolano
+    - muéstrame con montos reales
+    - ejemplifica con dólares
+    - necesito un caso de la vida real
+
+- intent: solicitar_comparacion
+  examples: |
+    - cuál es la diferencia
+    - compara estas opciones
+    - qué es mejor
+    - cuál me recomiendas
+    - qué ventajas tiene cada uno
+    - en qué se diferencian
+    - cuál conviene más
+    - hazme una comparación
+    - qué opción es más adecuada
+    - contrasta estas alternativas
+
+- intent: solicitar_requisitos_especificos
+  examples: |
+    - qué documentos necesito
+    - cuáles son los requisitos exactos
+    - qué papeles debo llevar
+    - lista de documentos requeridos
+    - qué necesito específicamente
+    - cuáles son los requisitos detallados
+    - qué debo preparar
+    - qué documentos piden
+    - requisitos específicos
+    - qué papeles necesito reunir
+
+- intent: solicitar_costos_tiempos
+  examples: |
+    - cuánto cuesta
+    - qué costo tiene
+    - cuánto tiempo toma
+    - cuál es el precio
+    - cuánto debo presupuestar
+    - qué duración tiene el trámite
+    - en cuánto tiempo sale
+    - cuánto se demora
+    - cuál es la inversión requerida
+    - qué costos aproximados
+    - cuánto dinero necesito
+    - qué plazos de tiempo
+
+- intent: solicitar_pasos_proceso
+  examples: |
+    - cuáles son los pasos
+    - cómo se hace el proceso
+    - qué pasos debo seguir
+    - guíame paso a paso
+    - describe el procedimiento
+    - cómo es el proceso completo
+    - qué hacer primero y qué después
+    - secuencia de pasos
+    - orden del procedimiento
+    - pasos a seguir
+
+- intent: solicitar_direcciones_contacto
+  examples: |
+    - dónde queda
+    - a dónde debo ir
+    - dirección de la oficina
+    - dónde se tramita
+    - qué oficina me corresponde
+    - ubicación exacta
+    - cómo contacto
+    - teléfono de la institución
+    - página web
+    - dirección física
+    - horario de atención
+    - dónde están ubicados
+
+- intent: comenzar_negocio
+  examples: |
+    - quiero iniciar un negocio
+    - cómo empezar un emprendimiento
+    - quiero comenzar una empresa
+    - cómo iniciar mi propio negocio
+    - quiero emprender un proyecto
+    - ideas para empezar un negocio
+    - cómo crear mi empresa
+    - quiero montar un negocio
+    - cómo arrancar un emprendimiento
+    - quiero abrir un local
+    - cómo empezar en los negocios
+    - quiero ser emprendedor
+    - iniciar mi negocio propio
+    - comenzar emprendimiento
+    - empezar empresa
+    - montar negocio
+    - crear empresa
+    - iniciar proyecto empresarial
+    - que iniciar un neocio
+    - quiero emprender
+    - deseo comenzar un negocio
+    - cómo empezar a emprender
+    - quiero tener mi negocio
+    - iniciar emprendimiento
+    - comenzar negocio desde cero
+    - por dónde empezar mi negocio
+    - qué necesito para comenzar un emprendimiento
+    - primeros pasos para un negocio
+    - quiero iniciar un negocio desde cero
+    - cómo empiezo mi primer emprendimiento
+    - qué debo hacer para crear mi empresa
+    - quiero montar un negocio pero no sé por dónde empezar
+    - cómo dar los primeros pasos para emprender
+    - necesito orientación para comenzar un negocio
+    - soy nuevo en esto de emprender, por dónde inicio
+    - quiero abrir mi propio negocio pero no tengo experiencia
+    - cómo estructurar mi idea de negocio inicial
+    - pasos fundamentales para lanzar un emprendimiento
+    - quiero comenzar un negocio pequeño
+    - cómo arrancar con un emprendimiento en venezuela
+    - necesito guía para empezar mi proyecto empresarial
+    - qué hago primero al crear una empresa
+    - cómo transformar mi idea en un negocio real
+    - quiero empezar un negocio con poco capital
+    - cómo iniciar operaciones comerciales
+    - pasos prácticos para comenzar a emprender
+    - quiero lanzar mi negocio pero no sé el proceso
+    - cómo materializar mi idea de negocio
+    - necesito el camino a seguir para crear mi empresa
+    - orientación para dar el primer paso empresarial
+    - cómo pasar de la idea a la acción en negocios
+    - proceso completo para iniciar un emprendimiento
+    - quiero comenzar ya mi negocio, por dónde empiezo
+
+- intent: formalizar_negocio
+  examples: |
+    - quiero formalizar mi negocio
+    - cómo formalizar mi emprendimiento
+    - qué necesito para formalizar
+    - pasos para formalizar mi empresa
+    - trámites para formalizar negocio
+    - cómo legalizar mi negocio
+    - proceso de formalización empresarial
+    - regularizar mi empresa
+    - poner legal mi negocio
+    - hacer formal mi emprendimiento
+    - cumplir con la ley
+    - estar legal con mi negocio
+    - registrar mi negocio
+    - hacer todo legal
+    - cumplir requisitos legales
+    - que necesito para formalizar mi negocio
+    - requisitos para formalizar
+    - documentos para formalizar
+    - poner en regla mi negocio
+    - cumplir normas
+    - legalizar emprendimiento
+    - formalizar empresa
+    - cómo volver legal mi negocio
+    - proceso para estar formal
+    - cómo legalizar mi negocio que ya está funcionando
+    - qué trámites necesito para formalizar mi emprendimiento
+    - quiero poner legal mi negocio informal
+    - proceso para regularizar mi empresa
+    - cómo obtener todos los papeles para mi negocio
+    - quiero estar formal con mi emprendimiento
+    - pasos para constituir legalmente mi empresa
+    - cómo hacer que mi negocio sea 100% legal
+    - necesito los documentos legales para operar
+    - quiero cumplir con todas las obligaciones legales
+    - cómo pasar de informal a formal en mi negocio
+    - proceso de legalización empresarial completo
+    - qué necesito para operar completamente legal
+    - cómo obtener la documentación empresarial completa
+    - quiero regularizar mi situación fiscal y legal
+    - pasos para la formalización empresarial en venezuela
+    - cómo obtener permisos y registros para mi negocio
+    - quiero tener todos los papeles en regla
+    - proceso para estar al día con las leyes comerciales
+    - cómo constituir mi empresa formalmente
+    - trámites para legalizar mi operación comercial
+    - quiero formalizar mi situación empresarial
+    - cómo obtener registros mercantiles y fiscales
+    - proceso integral de legalización empresarial
+    - qué debo hacer para que mi negocio sea formal
+
+- intent: inversion_capital
+  examples: |
+    - cómo invertir [1000]{"entity": "monto"} dólares
+    - tengo [500]{"entity": "monto"} usd para invertir
+    - quiero invertir [2000]{"entity": "monto"} en un negocio
+    - cómo usar [1500]{"entity": "monto"} dólares en mi emprendimiento
+    - tengo [1000]{"entity": "monto"} para empezar un negocio
+    - qué negocio puedo empezar con [800]{"entity": "monto"} usd
+    - cómo invertir mi capital de [1200]{"entity": "monto"}
+    - estrategias para invertir [3000]{"entity": "monto"} dólares
+    - tengo [1000]{"entity": "monto"} y quiero emprender
+    - cómo rentabilizar [2500]{"entity": "monto"} usd
+    - inversiones inteligentes con [1500]{"entity": "monto"} dólares
+    - qué hacer con [1000]{"entity": "monto"} usd en venezuela
+    - oportunidades de inversión con [2000]{"entity": "monto"}
+    - cómo poner a trabajar [1800]{"entity": "monto"} dólares
+    - ideas para invertir [1200]{"entity": "monto"} usd
+    - como puedo invertir si tengo 1000 dolares
+    - tengo 500 dólares para invertir
+    - con 2000 usd qué negocio empezar
+    - invertir 1500 dólares
+    - capital de 3000 usd para negocio
+    - qué hacer con 1000 dólares
+    - invertir mi dinero en negocio
+    - oportunidades con 2000 dólares
+    - cómo invertir capital
+    - usar dinero en negocio
+    - en qué negocio invertir [monto] dólares
+    - ideas de negocio para [monto] usd
+    - en qué negocio puedo invertir [1000]{"entity": "monto"} dólares
+    - tengo [5000]{"entity": "monto"} usd para invertir, qué recomiendas
+    - qué oportunidades de inversión hay con [2000]{"entity": "monto"}
+    - cómo invertir [3000]{"entity": "monto"} dólares inteligentemente
+    - tengo [1500]{"entity": "monto"} para invertir en un negocio
+    - en qué sector invertir [2500]{"entity": "monto"} usd
+    - qué negocio da mejor retorno con [1000]{"entity": "monto"} dólares
+    - cómo rentabilizar [4000]{"entity": "monto"} de capital
+    - opciones de inversión para [1800]{"entity": "monto"} usd
+    - qué emprender con [1200]{"entity": "monto"} dólares
+    - mejores negocios para invertir [3500]{"entity": "monto"}
+    - cómo distribuir [5000]{"entity": "monto"} usd en inversiones
+    - qué negocio montar con [800]{"entity": "monto"} dólares
+    - oportunidades con [2200]{"entity": "monto"} de capital
+    - cómo hacer rendir [1500]{"entity": "monto"} usd en negocio
+    - en qué invertir [3000]{"entity": "monto"} dólares seguro
+    - negocios rentables para [2000]{"entity": "monto"} usd
+    - cómo utilizar [1000]{"entity": "monto"} dólares en emprendimiento
+    - qué negocio empezar con [1600]{"entity": "monto"} de capital
+    - inversiones inteligentes con [2800]{"entity": "monto"} usd
+    - cómo poner a trabajar [1900]{"entity": "monto"} dólares
+    - mejores opciones para invertir [2400]{"entity": "monto"}
+    - qué negocio funciona con [1100]{"entity": "monto"} usd
+    - cómo invertir [3200]{"entity": "monto"} dólares en venezuela
+    - oportunidades de negocio con [1700]{"entity": "monto"} de capital
+
+- intent: registro_empresa_detallado
+  examples: |
+    - quiero registrar mi empresa
+    - cómo hago para constituir una [c.a.]{"entity": "tipo_empresa"}
+    - necesito crear una [sociedad de responsabilidad limitada]{"entity": "tipo_empresa"}
+    - qué es una [firma personal]{"entity": "tipo_empresa"}
+    - cuáles son los pasos para abrir una [compañía anónima]{"entity": "tipo_empresa"}
+    - ayuda para constituir una empresa
+    - trámites para el [saren]{"entity": "actividad_especifica", "value": "saren"}
+    - cómo empiezo mi negocio legalmente
+    - quiero montar una [persona natural]{"entity": "tipo_empresa"}
+    - necesito saber sobre la constitución de una [srl]{"entity": "tipo_empresa"}
+    - cuáles son los requisitos para constituir
+    - quiero formalizar mi emprendimiento
+    - cómo le doy estatus legal a mi negocio
+    - trámites para crear mi compañía
+    - necesito constituir una sociedad
+    - darme de alta en el registro mercantil
+    - cómo empezar un negocio en venezuela
+    - registro de una empresa
+    - constituir una empresa
+    - formalizar mi empresa
+    - crear una compañía
+    - cómo se registra una empresa
+    - proceso de registro de empresa
+    - trámite para constituir empresa
+    - quiero inscribir mi empresa
+    - cómo se constituye una sociedad
+    - registrar negocio en saren
+    - crear empresa legal
+    - constitución de empresa
+    - registro mercantil
+    - qué es el registro mercantil
+    - cómo funciona el saren
+    - proceso completo de registro empresarial
+
+- intent: tipos_empresa_comparacion
+  examples: |
+    - qué diferencia hay entre c.a. y s.r.l.
+    - cuál tipo de empresa me conviene
+    - comparación entre tipos de empresa
+    - qué es mejor c.a. o s.r.l.
+    - diferencias entre compañía anónima y sociedad limitada
+    - qué ventajas tiene cada tipo de empresa
+    - cuál elegir para mi negocio
+    - qué tipo de sociedad me recomiendas
+    - comparar opciones de constitución
+    - diferencias entre persona natural y jurídica
+    - qué me conviene más para mi emprendimiento
+    - ventajas y desventajas de cada tipo
+
+- intent: obtener_rif_detallado
+  examples: |
+    - cómo obtengo el [rif]{"entity": "actividad_especifica", "value": "rif"}
+    - necesito sacar el [rif]{"entity": "actividad_especifica", "value": "rif"} para mi empresa
+    - dónde tramito el [rif]{"entity": "actividad_especifica", "value": "rif"} en el [seniat]{"entity": "actividad_especifica", "value": "seniat"}
+    - qué necesito para el [rif]{"entity": "actividad_especifica", "value": "rif"}
+    - se vence el [rif]{"entity": "actividad_especifica", "value": "rif"}
+    - cómo actualizar mi [rif]{"entity": "actividad_especifica", "value": "rif"}
+    - quiero solicitar el [rif]{"entity": "actividad_especifica", "value": "rif"} para mi nuevo negocio
+    - trámite de rif
+    - requisitos para el rif
+    - cédula de identidad de la empresa
+    - dónde me inscribo fiscalmente
+    - necesito el rif para mi negocio
+    - cómo conseguir rif
+    - obtener registro fiscal
+    - rif del seniat
+    - sacar rif empresa
+    - trámite rif seniat
+    - inscripción fiscal
+    - número de rif
+    - qué es el rif exactamente
+    - para qué sirve el rif
+    - por qué necesito el rif
+    - proceso completo para obtener rif
+    - documentos específicos para rif
+
+- intent: permiso_patente_municipal
+  examples: |
+    - cómo saco la patente municipal
+    - cuánto cuesta la patente de industria y comercio en [chacao]{"entity": "municipio"}
+    - qué es la patente municipal exactamente
+    - cómo calculan la patente en [baruta]{"entity": "municipio"}
+    - cada cuánto se paga la patente
+    - cuánto debo pagar de patente por mi negocio
+    - costo de la patente municipal en [sucre]{"entity": "municipio"}
+    - cómo funciona el cálculo de la patente
+    - patente municipal para local comercial
+    - cuál es el trámite para obtener la patente
+    - requisitos para la patente de actividades económicas
+    - cómo me calculan el monto de la patente
+    - porcentaje que cobran de patente municipal
+    - cada cuánto tiempo se renueva la patente
+    - necesito la patente para operar legalmente
+    - patente municipal en [el hatillo]{"entity": "municipio"}
+    - qué pasa si no pago la patente
+    - cuánto debo presupuestar para la patente anual
+    - cómo sé cuánto me toca pagar de patente
+    - exenciones o descuentos en la patente municipal
+
+- intent: conformidad_uso_local
+  examples: |
+    - qué es la conformidad de uso
+    - cómo obtengo la conformidad de uso para mi local
+    - necesito la conformidad de uso antes de alquilar
+    - qué verifica la conformidad de uso
+    - cuánto cuesta la conformidad de uso
+    - la alcaldía me pide conformidad de uso
+    - trámite de conformidad de uso en [chacao]{"entity": "municipio"}
+    - documentos para la conformidad de uso
+    - qué pasa si mi local no tiene conformidad de uso
+    - cómo sé si mi local tiene conformidad de uso comercial
+    - tiempo que tarda la conformidad de uso
+    - diferencia entre conformidad de uso y patente
+    - inspección para conformidad de uso
+    - requisitos de zonificación para conformidad
+    - problema con la conformidad de uso de mi local
+    - necesito cambiar la conformidad de uso existente
+    - alquilar local sin conformidad de uso es riesgoso
+    - costo de la conformidad de uso en [baruta]{"entity": "municipio"}
+    - pasos para obtener la conformidad de uso
+    - la conformidad de uso es obligatoria para abrir
+
+- intent: certificado_bomberos
+  examples: |
+    - necesito el certificado de bomberos
+    - cómo obtengo el certificado de bomberos para mi negocio
+    - qué piden los bomberos para el certificado
+    - costo del certificado de bomberos
+    - inspección de bomberos requisitos
+    - cuántos extintores necesito para el certificado
+    - certificado de bomberos para local comercial
+    - cada cuánto se renueva el certificado de bomberos
+    - bomberos me van a inspeccionar
+    - salidas de emergencia para certificado bomberos
+    - normas de seguridad contra incendios
+    - trámite del cuerpo de bomberos
+    - qué verifica la inspección de bomberos
+    - instalación eléctrica para certificado bomberos
+    - señalamiento de seguridad para bomberos
+    - multa por no tener certificado de bomberos
+    - certificado de bomberos en [caracas]{"entity": "municipio"}
+    - tiempo de vigencia del certificado
+    - requisitos mínimos para pasar inspección
+    - cómo prepararme para la inspección de bomberos
+
+- intent: permiso_sanitario_alimentos
+  examples: |
+    - cómo obtengo el permiso sanitario para vender comida
+    - requisitos para permiso sanitario de restaurante
+    - permiso sanitario para cafetería
+    - costo del permiso sanitario
+    - inspección sanitaria qué verifica
+    - curso de manipulación de alimentos dónde tomar
+    - normas sanitarias para locales de comida
+    - permiso sanitario del ministerio de salud
+    - qué necesito para vender alimentos preparados
+    - requisitos de higiene para permiso sanitario
+    - cada cuánto se renueva el permiso sanitario
+    - problemas comunes en inspección sanitaria
+    - instalaciones para permiso sanitario alimentos
+    - control de temperatura para refrigeradores
+    - desechos y basura para permiso sanitario
+    - agua potable requisito sanitario
+    - venta de comida sin permiso sanitario consecuencias
+    - permiso sanitario para food truck
+    - diferencia entre permiso sanitario y registro sanitario
+    - proceso completo para permiso sanitario
+
+- intent: registro_inpsasel
+  examples: |
+    - qué es el INPSASEL y para qué sirve
+    - cómo me registro en el INPSASEL
+    - requisitos del programa de seguridad y salud en el trabajo
+    - registro en INPSASEL para mi empresa
+    - cuánto cuesta el registro en INPSASEL
+    - qué es el PSST (Programa de Seguridad y Salud en el Trabajo)
+    - necesito inscribir mi empresa en INPSASEL
+    - obligaciones con INPSASEL si tengo empleados
+    - consultor para registro INPSASEL
+    - documentos para registro INPSASEL
+    - cada cuánto se renueva el registro INPSASEL
+    - inspección de INPSASEL qué verifica
+    - consecuencias de no estar registrado en INPSASEL
+    - diferencias entre INPSASEL y IVSS
+    - registro de riesgos laborales en INPSASEL
+    - comité de seguridad y salud laboral
+    - capacitación de trabajadores para INPSASEL
+    - primeros auxilios requisitos INPSASEL
+    - botiquín según normas INPSASEL
+    - proceso completo de registro INPSASEL
+
+- intent: contrato_laboral_basico
+  examples: |
+    - qué debe tener un contrato de trabajo
+    - modelo de contrato laboral venezolano
+    - requisitos del contrato según LOTTT
+    - cómo hacer un contrato de trabajo válido
+    - elementos esenciales del contrato laboral
+    - contrato por tiempo determinado vs indeterminado
+    - cláusulas obligatorias en contrato de trabajo
+    - salario integral en el contrato laboral
+    - funciones específicas en contrato laboral
+    - contrato laboral para primer empleado
+    - diferencia entre contrato laboral y de servicios
+    - consecuencias de no tener contrato laboral escrito
+    - jornada de trabajo en contrato laboral
+    - período de prueba en contrato laboral
+    - beneficios en contrato laboral
+    - terminación de contrato laboral
+    - multas por contrato laboral incompleto
+    - contrato laboral para medio tiempo
+    - cómo calcular lo que va en el contrato
+    - ejemplos prácticos de contrato laboral
+
+- intent: contrato_arrendamiento_local
+  examples: |
+    - qué debe tener un contrato de arrendamiento comercial
+    - cláusulas importantes en contrato de alquiler de local
+    - contrato de arrendamiento para negocio
+    - cómo negociar contrato de alquiler de local
+    - garantía en contrato de arrendamiento comercial
+    - quién paga mejoras en local alquilado
+    - conformidad de uso en contrato de arrendamiento
+    - responsabilidad de servicios en contrato de alquiler
+    - aumento de alquiler en contrato comercial
+    - terminación anticipada de contrato de local
+    - contrato de arrendamiento modelo venezolano
+    - duración mínima contrato arrendamiento comercial
+    - depósito de garantía cuánto es normal
+    - impuestos municipales quién paga en contrato
+    - mantenimiento del local en contrato arrendamiento
+    - subarriendo en contrato comercial
+    - renovación automática en contrato de alquiler
+    - problemas comunes en contratos de locales
+    - verificar propiedad antes de firmar contrato
+    - consejos para contrato de arrendamiento comercial
+
+
+- intent: acta_constitutiva_definicion
+  examples: |
+    - qué es exactamente el acta constitutiva
+    - para qué sirve el acta constitutiva de la empresa
+    - contenido del acta constitutiva
+    - diferencia entre acta constitutiva y estatutos
+    - importancia del acta constitutiva
+    - quién elabora el acta constitutiva
+    - acta constitutiva de una SRL qué incluye
+    - acta constitutiva de una CA qué contiene
+    - modificaciones al acta constitutiva
+    - costo de elaborar acta constitutiva
+    - proceso de firma del acta constitutiva
+    - legalización del acta constitutiva
+    - publicación del acta constitutiva en gaceta
+    - ejemplo de acta constitutiva
+    - partes fundamentales del acta
+    - datos que van en el acta constitutiva
+    - errores comunes en actas constitutivas
+    - consecuencias de acta constitutiva mal hecha
+    - cómo verificar que el acta está bien hecha
+    - tiempo para elaborar acta constitutiva
+
+
+
+- intent: propiedad_intelectual_detallada
+  examples: |
+    - cómo registro mi marca
+    - quiero proteger el nombre de mi empresa en el [sapi]{"entity": "actividad_especifica", "value": "sapi"}
+    - qué son las [clases niza]{"entity": "actividad_especifica", "value": "clases_niza"}
+    - necesito hacer una [búsqueda de anterioridades]{"entity": "actividad_especifica", "value": "busqueda_anterioridades"}
+    - registrar un logo en venezuela
+    - cuánto cuesta registrar una marca industrial
+    - duración del registro de marca en el [sapi]{"entity": "actividad_especifica", "value": "sapi"}
+    - cómo registro un eslogan
+    - proteger mi nombre comercial
+    - trámite de marca en el sapi
+    - propietario de una marca
+    - registro marca
+    - propiedad intelectual
+    - sapi registro
+    - marca comercial
+    - proteger marca
+    - registro sapi
+    - proceso completo de registro de marca
+    - cómo proteger mi nombre comercial
+    - trámites en el sapi
+
+- intent: documentos_tributarios_detallados
+  examples: |
+    - cuáles son los libros fiscales obligatorios
+    - necesito legalizar mis libros contables
+    - cuáles son los [deberes formales]{"entity": "actividad_especifica", "value": "deberes_formales"}
+    - libros de [compras y ventas]{"entity": "actividad_especifica", "value": "libros_compras_ventas"}
+    - qué libros debo llevar en el [saren]{"entity": "actividad_especifica", "value": "saren"}
+    - cómo legalizar los libros de diario y mayor
+    - libros que pide el seniat
+    - qué es la [cartelera fiscal]{"entity": "actividad_especifica", "value": "cartelera_fiscal"}
+    - requisitos de la cartelera fiscal
+    - libros contables
+    - deberes formales
+    - libros fiscales
+    - legalización libros
+    - contabilidad obligatoria
+    - libros seniat
+    - cartelera fiscal
+    - qué libros contables necesito
+    - cómo llevar la contabilidad
+    - documentos tributarios obligatorios
+
+- intent: conceptos_legales_detallados
+  examples: |
+    - qué es la [publicidad registral]{"entity": "actividad_especifica", "value": "publicidad_registral"}
+    - qué significa [separación patrimonial]{"entity": "actividad_especifica", "value": "separacion_patrimonial"}
+    - diferencia entre [responsabilidad limitada]{"entity": "actividad_especifica", "value": "responsabilidad_limitada"} e ilimitada
+    - qué es la [firma personal]{"entity": "tipo_empresa"}
+    - explicame qué es el [saren]{"entity": "actividad_especifica", "value": "saren"}
+    - conceptos jurídicos básicos para emprendedores
+    - diferencia entre persona natural y jurídica
+    - qué es la junta directiva
+    - conceptos legales
+    - términos jurídicos
+    - derecho empresarial
+    - conceptos básicos
+    - glosario legal
+    - términos legales
+    - explicación de términos legales
+    - qué significa responsabilidad limitada
+    - concepto de persona jurídica
+
+- intent: obligaciones_tributarias_detalladas
+  examples: |
+    - cuál es la alícuota del [iva]{"entity": "actividad_especifica", "value": "iva"}
+    - cuándo declaro el [islr]{"entity": "actividad_especifica", "value": "islr"}
+    - qué es la [determinación de oficio]{"entity": "actividad_especifica", "value": "determinacion_oficio"}
+    - cómo calculo el [iva]{"entity": "actividad_especifica", "value": "iva"}
+    - retenciones de [islr]{"entity": "actividad_especifica", "value": "islr"}
+    - plazos para declarar en el [seniat]{"entity": "actividad_especifica", "value": "seniat"}
+    - consecuencias de no declarar [iva]{"entity": "actividad_especifica", "value": "iva"}
+    - cómo hago la declaración de [iva]{"entity": "actividad_especifica", "value": "iva"}
+    - multas del seniat
+    - declarar impuestos mensuales
+    - obligaciones tributarias
+    - impuestos empresa
+    - iva islr
+    - declaraciones seniat
+    - obligaciones fiscales
+    - pago impuestos
+    - cómo declarar impuestos
+    - calendario de declaraciones
+    - cálculo de iva e islr
+
+- intent: obligaciones_laborales_detalladas
+  examples: |
+    - cómo calculo el [salario integral]{"entity": "actividad_especifica", "value": "salario_integral"}
+    - cuáles son los aportes al [ivss]{"entity": "actividad_especifica", "value": "ivss"}
+    - qué es el [faov]{"entity": "actividad_especifica", "value": "faov"}
+    - necesito inscribir a un empleado en el [inces]{"entity": "actividad_especifica", "value": "inces"}
+    - qué es la [lottt]{"entity": "actividad_especifica", "value": "lottt"}
+    - registro del programa de [inpsasel]{"entity": "actividad_especifica", "value": "inpsasel"}
+    - diferencia entre contrato a tiempo determinado e indeterminado
+    - cómo evitar la [simulación laboral]{"entity": "actividad_especifica", "value": "simulacion_laboral"}
+    - obligaciones con mis empleados
+    - aportes parafiscales en venezuela
+    - vacaciones y utilidades
+    - prestaciones sociales en venezuela
+    - cómo contratar a alguien
+    - obligaciones laborales
+    - derechos trabajadores
+    - lottt
+    - ivss faov inces
+    - nómina empleados
+    - contrato trabajo
+    - cómo calcular prestaciones sociales
+    - aportes patronales obligatorios
+    - obligaciones con los empleados
+
+- intent: beneficios_formalidad_detallados
+  examples: |
+    - por qué debo formalizar mi empresa
+    - ventajas de tener una empresa constituida
+    - cómo acceder a [créditos]{"entity": "actividad_especifica", "value": "creditos"} si estoy formalizado
+    - importancia de la [solvencia laboral]{"entity": "actividad_especifica", "value": "solvencia_laboral"}
+    - [ley de emprendimiento]{"entity": "actividad_especifica", "value": "ley_emprendimiento"} en venezuela
+    - beneficios de tener rif
+    - qué me gano con registrar mi empresa
+    - soy formal, ¿y ahora qué?
+    - ventajas de ser una empresa formal
+    - beneficios formalidad
+    - ventajas empresa legal
+    - por qué formalizar
+    - beneficios registro
+    - ventajas rif
+    - qué gano al formalizarme
+    - ventajas concretas de la formalización
+    - beneficios reales de estar formal
+
+- intent: plan_financiero_detallado
+  examples: |
+    - cómo hago un [plan financiero]{"entity": "actividad_especifica", "value": "plan_financiero"}
+    - necesito proyectar mi [flujo de caja]{"entity": "actividad_especifica", "value": "flujo_caja"}
+    - qué es el [payback period]{"entity": "actividad_especifica", "value": "payback_period"}
+    - cómo calculo el [roe]{"entity": "actividad_especifica", "value": "roe"}
+    - necesito hacer un análisis de sensibilidad
+    - cómo proyectar en un entorno inflacionario
+    - ayuda con mi plan de negocio
+    - estructurar un plan financiero en venezuela
+    - necesito hacer las proyecciones de mi negocio
+    - cómo planeo las finanzas de mi pyme
+    - guía para hacer un plan de negocio
+    - qué es un plan financiero y para qué sirve
+    - necesito proyectar mis ingresos y gastos
+    - plan financiero
+    - proyecciones financieras
+    - planificación financiera
+    - flujo caja
+    - presupuesto empresa
+    - cómo crear un plan financiero paso a paso
+    - elementos de un plan financiero completo
+
+- intent: punto_equilibrio_detallado
+  examples: |
+    - cuál es la fórmula del [punto de equilibrio]{"entity": "actividad_especifica", "value": "punto_equilibrio"}
+    - qué es el [margen de contribución]{"entity": "actividad_especifica", "value": "margen_contribucion"}
+    - cómo calculo mis costos fijos y variables
+    - necesito saber cuándo empiezo a ganar dinero
+    - análisis de [punto de equilibrio]{"entity": "actividad_especifica", "value": "punto_equilibrio"} para mi negocio
+    - ejemplo de punto de equilibrio
+    - cómo saber si soy rentable
+    - cuándo dejo de perder dinero
+    - cálculo de punto de equilibrio
+    - costos fijos y variables para el break even
+    - punto equilibrio
+    - break even
+    - margen contribución
+    - costos fijos variables
+    - cálculo rentabilidad
+    - cómo calcular punto de equilibrio paso a paso
+    - fórmula práctica del punto de equilibrio
+
+- intent: clasificacion_gastos_negocio
+  examples: |
+    - no sé cómo organizar mis gastos del negocio
+    - tengo muchos gastos y no sé cuáles son importantes
+    - mis gastos están desordenados
+    - no sé qué gastos son realmente necesarios
+    - siempre gasto más de lo planeado
+    - mis gastos se me van de las manos
+    - cada mes tengo gastos diferentes
+    - no tengo control de lo que gasto
+    - cómo organizo mis gastos mensuales
+    - qué sistema uso para clasificar mis desembolsos
+    - cómo sé cuáles gastos priorizar
+    - qué hacer con los gastos inesperados
+    - cómo categorizar los gastos de mi negocio
+    - qué método usar para organizar gastos
+    - cómo llevar orden en mis desembolsos
+    - qué considerar al clasificar gastos
+    - qué son los costos fijos y variables
+    - cómo clasificar costos operativos
+    - qué es estructura de costos
+    - categorización de gastos empresariales
+    - cómo organizo lo que gasto en el negocio
+    - mis gastos están como arroz con mango
+    - pa' qué sirve clasificar los gastos
+    - siempre salen gastos que no esperaba
+
+- intent: gastos_constantes_mes
+  examples: |
+    - hay gastos que siempre tengo que pagar
+    - cada mes tengo los mismos gastos fijos
+    - no importa si vendo o no, ciertos gastos salen
+    - mis gastos mensuales no cambian mucho
+    - siempre tengo que pagar lo mismo cada mes
+    - hay desembolsos que son inevitables
+    - mis obligaciones mensuales son constantes
+    - ciertos gastos aparecen todos los meses
+    - cómo identificar mis gastos mensuales fijos
+    - qué gastos son constantes en mi negocio
+    - cómo planificar para los gastos que siempre tengo
+    - cuáles son los gastos que no puedo evitar
+    - cómo calcular mis gastos fijos mensuales
+    - qué considerar como gasto constante
+    - cómo manejar los gastos que se repiten
+    - qué hacer con los gastos que siempre salen
+    - qué son los costos fijos
+    - cómo calcular gastos operativos fijos
+    - estructura de costos constantes
+    - gastos periódicos del negocio
+    - qué gastos salen sí o sí cada mes
+    - hay gastos que siempre tocan pagar
+    - mi negocio tiene gastos que no se mueven
+    - cómo le hago con los gastos que siempre salen
+
+
+- intent: gastos_proporcionales_ventas
+  examples: |
+    - mis gastos suben cuando vendo más
+    - hay gastos que dependen de cuánto vendo
+    - no sé calcular cuánto gastaré si vendo X cantidad
+    - algunos gastos cambian según mis ventas
+    - cuando tengo más ventas, también tengo más gastos
+    - mis desembolsos varían con el volumen
+    - no puedo prever bien mis gastos porque cambian
+    - hay gastos que son proporcionales a lo que vendo
+    - cómo calcular gastos que dependen de las ventas
+    - qué gastos aumentan si vendo más
+    - cómo prever gastos variables mensuales
+    - qué hacer con gastos que cambian constantemente
+    - cómo relacionar mis gastos con mis ventas
+    - qué sistema usar para gastos proporcionales
+    - cómo manejar desembolsos que varían
+    - qué considerar en gastos que cambian
+    - qué son los costos variables
+    - gastos proporcionales a las ventas
+    - estructura de costos variables
+    - relación costo-volumen
+    - hay gastos que jalan cuando vendo
+    - cómo le hago con gastos que suben y bajan
+    - mis gastos andan como las ventas
+    - qué gastos van de la mano con lo que vendo
+
+
+- intent: control_dinero_efectivo
+  examples: |
+    - a veces no tengo para pagar a mis proveedores
+    - el dinero no me alcanza a fin de mes
+    - no sé cuánto tengo disponible para gastar
+    - mis ingresos y gastos no coinciden
+    - siempre ando apretado con el efectivo
+    - no puedo prever cuándo me faltará dinero
+    - tengo ingresos pero nunca tengo disponible
+    - no controlo bien el dinero que entra y sale
+    - cómo controlo el dinero que entra y sale
+    - qué sistema usar para manejar mi efectivo
+    - cómo planificar mis pagos mensuales
+    - cómo evitar quedarme sin dinero
+    - qué hacer para tener siempre efectivo disponible
+    - cómo organizar mis entradas y salidas
+    - qué método usar para control de efectivo
+    - cómo hacer que el dinero rinda más
+    - qué es el flujo de caja
+    - cómo manejar la liquidez
+    - control de efectivo en mi negocio
+    - gestión de tesorería básica
+    - la plata no me rinde en el negocio
+    - cómo hago para que el dinero alcance
+    - siempre ando corto de efectivo
+    - mi negocio come mucha plata líquida
+
+- intent: proyeccion_entradas_salidas
+  examples: |
+    - no sé si tendré suficiente dinero el próximo mes
+    - no puedo prever mis ingresos futuros
+    - mis gastos futuros me preocupan
+    - no sé planificar mi dinero a futuro
+    - siempre me sorprenden gastos no esperados
+    - no tengo claridad de cómo estará mi negocio luego
+    - no sé anticipar mis necesidades de dinero
+    - vivo al día sin poder planificar
+    - cómo prever mis ingresos mensuales
+    - qué método usar para proyectar gastos
+    - cómo planificar mis finanzas a futuro
+    - qué considerar al proyectar entradas y salidas
+    - cómo anticipar mis necesidades de efectivo
+    - qué sistema usar para proyecciones
+    - cómo hacer un plan financiero simple
+    - qué herramientas para proyectar dinero
+    - cómo hacer proyección de flujo de caja
+    - planificación de tesorería
+    - presupuesto de efectivo
+    - forecast financiero básico
+    - cómo sé si voy a tener plata después
+    - pa' saber si me va a alcanzar luego
+    - cómo le hago para prever la plata
+    - quiero saber cómo va a estar mi negocio económico
+
+
+- intent: reserva_emergencia_negocio
+  examples: |
+    - siempre me agarran los imprevistos sin dinero
+    - no tengo ahorros para emergencias del negocio
+    - un gasto inesperado me puede quebrar
+    - vivo con miedo de que algo salga mal
+    - no tengo colchón para tiempos malos
+    - cualquier problema me deja sin recursos
+    - me preocupa no tener respaldo financiero
+    - siento que mi negocio es muy vulnerable
+    - cómo crear un fondo de emergencia
+    - cuánto debo ahorrar para imprevistos
+    - dónde guardar el dinero de reserva
+    - cómo construir un colchón financiero
+    - qué considerar para ahorros del negocio
+    - cómo proteger mi negocio de crisis
+    - qué sistema usar para ahorro empresarial
+    - cómo empezar a crear reservas
+    - fondo de contingencia empresarial
+    - reservas de tesorería
+    - capital de trabajo de seguridad
+    - colchón financiero operativo
+    - cómo hago un colchón pa' los malos tiempos
+    - pa' las vacas flacas, qué hago
+    - cómo me preparo por si se daña algo
+    - quiero tener plata guardada pa' emergencias
+
+
+- intent: opciones_prestamos_negocio
+  examples: |
+    - necesito dinero para hacer crecer mi negocio
+    - no tengo suficiente capital para expandirme
+    -necesito conseguir un prestamo
+    - necesito conseguir un prestamo
+    - necesito un préstamo para comprar equipo
+    - quiero financiamiento para mi emprendimiento
+    - no alcanzo con mis ahorros para lo que necesito
+    - busco alternativas para conseguir capital
+    - necesito dinero extra para mi empresa
+    - mis recursos no son suficientes para mis planes
+    - dónde puedo conseguir un préstamo para negocio
+    - qué bancos dan créditos a pequeñas empresas
+    - cómo acceder a financiamiento formal
+    - qué opciones de préstamo existen
+    - cómo conseguir un crédito productivo
+    - qué necesito para que me presten dinero
+    - dónde buscar financiamiento empresarial
+    - qué alternativas de crédito hay
+    - microcréditos para PYMES en Venezuela
+    - créditos productivos de la banca comercial
+    - financiamiento bancario para emprendedores
+    - líneas de crédito empresarial
+    - dónde consigo plata prestada pa' mi negocio
+    - qué banco jala pa' prestarle a pequeños
+    - cómo hago para que me suelten un préstamo
+    - pa' crecer necesito plata, dónde la consigo
+
+- intent: autofinanciamiento_crecimiento
+  examples: |
+    - quiero crecer sin pedir préstamos
+    - no quiero endeudarme para expandirme
+    - cómo hago para que mi negocio crezca solo
+    - quiero reinvertir mis ganancias inteligentemente
+    - cómo hacer más con lo que ya tengo
+    - prefiero crecer lentamente pero seguro
+    - no me gusta la idea de deber dinero
+    - quiero expansión con mis propios recursos
+    - cómo reinvertir mis utilidades
+    - qué estrategias de crecimiento propio
+    - cómo hacer que las ganancias trabajen
+    - qué hacer con los excedentes del negocio
+    - cómo planificar crecimiento sin deuda
+    - qué métodos de autofinanciamiento
+    - cómo capitalizar mis ganancias
+    - qué hacer para crecer orgánicamente
+    - bootstrapping para emprendedores
+    - crecimiento orgánico empresarial
+    - reinversión de utilidades
+    - autofinanciamiento del crecimiento
+    - cómo hago para que el negocio crezca solo
+    - pa' crecer sin deberle a nadie
+    - cómo le saco más a lo que ya gano
+    - quiero que lo que gano trabaje para mí  
+
+- intent: fuentes_financiamiento_detalladas
+  examples: |
+    - cuáles son las fuentes de financiamiento disponibles
+    - necesito información detallada sobre financiamiento
+    - qué opciones de financiación existen para emprendedores
+    - cómo puedo conseguir financiamiento para mi negocio
+    - explícame las fuentes de financiamiento en detalle
+    - qué alternativas de financiación hay en venezuela
+    - necesito conocer todas las opciones de financiamiento
+    - cuáles son las tres fuentes principales de financiamiento
+    - dame información completa sobre financiamiento empresarial
+    - cómo se financia un negocio en venezuela
+    - fuentes de capital para emprendedores
+    - opciones para financiar mi emprendimiento
+    - qué tipos de financiamiento existen
+    - cómo conseguir capital para empezar
+    - alternativas de financiación para pymes
+    - cuál es la mejor forma de financiar un negocio
+    - necesito guía sobre financiamiento empresarial
+    - cómo acceder a diferentes fuentes de financiación
+    - información sobre microcréditos y otras opciones
+    - cuáles son las vías para obtener financiamiento
+    - necesito detalles sobre cómo financiar mi proyecto
+    - qué opciones tengo para conseguir capital
+    - explícame sobre inversores y préstamos
+    - cómo funciona el financiamiento en venezuela
+    - fuentes de financiamiento específicas para mi negocio
+    - necesito orientación sobre capital inicial
+    - cuáles son las formas de conseguir dinero para emprender
+    - dame un panorama completo del financiamiento
+    - qué debo saber sobre financiación empresarial
+    - opciones de financiamiento paso a paso
+    - necesito entender todas las fuentes de capital
+    - cómo elegir la mejor fuente de financiamiento
+    - información detallada sobre préstamos empresariales
+    - cuáles son las vías formales e informales de financiación
+    - necesito conocer las tres opciones principales
+    - guíame sobre cómo financiar mi empresa
+    - qué alternativas tengo para obtener recursos
+    - fuentes de financiamiento con sus pros y contras
+    - necesito un desglose completo de opciones de financiación
+    - cómo conseguir financiamiento según mi etapa
+    - cuáles son las fuentes seguras de financiamiento
+    - información sobre bootstrapping y otras opciones
+    - necesito detalles sobre cada tipo de financiamiento
+    - cómo acceder a capital de riesgo o inversores
+    - opciones de financiamiento para diferentes etapas
+    - fuentes de financiamiento con montos específicos
+    - necesito conocer los requisitos de cada fuente
+    - qué fuente de financiamiento me recomiendas
+    - cómo evaluar diferentes opciones de financiación
+    - información completa sobre el tema de financiamiento
+    - necesito una explicación detallada del financiamiento 
+
+- intent: alternativas_credito_bancario
+  examples: |
+    - los bancos no me quieren dar préstamo
+    - no cumplo con los requisitos bancarios
+    - necesito dinero rápido sin tanto papeleo
+    - los trámites bancarios son muy lentos
+    - busco opciones más flexibles que los bancos
+    - no quiero lidiar con la burocracia bancaria
+    - las tasas de los bancos son muy altas
+    - necesito una alternativa al sistema tradicional
+    - dónde conseguir dinero sin bancos
+    - qué opciones existen fuera del sistema bancario
+    - cómo financiarme sin recurrir a bancos
+    - qué alternativas informales hay
+    - dónde buscar crédito más accesible
+    - cómo conseguir capital sin bancos
+    - qué hacer si los bancos me rechazan
+    - dónde pedir prestado sin tantos requisitos
+    - financiamiento alternativo para PYMES
+    - crowdfunding para emprendedores
+    - préstamos entre particulares
+    - sistemas de financiamiento comunitario
+    - los bancos no jalan, dónde más busco
+    - pa' conseguir plata sin bancos
+    - cómo hago si el banco no me suelta
+    - alternativas a los bancos pa' préstamos
+
+
+- intent: evaluacion_rentabilidad_proyecto
+  examples: |
+    - no sé si mi negocio dará ganancias
+    - me preocupa perder mi inversión
+    - quiero saber si vale la pena mi idea
+    - no estoy seguro si será rentable
+    - tengo miedo de invertir y no recuperar
+    - cómo sé si voy a ganar dinero
+    - dudo si mi proyecto es viable
+    - necesito certeza antes de arriesgarme
+    - cómo evaluar si un negocio es rentable
+    - qué considerar para saber si dará ganancias
+    - cómo calcular la rentabilidad de mi idea
+    - qué análisis hacer antes de empezar
+    - cómo saber si vale la pena el esfuerzo
+    - qué verificar para asegurar ganancias
+    - cómo prever si será exitoso
+    - qué pasos para evaluar rentabilidad
+    - análisis de rentabilidad empresarial
+    - estudio de viabilidad financiera
+    - evaluación de proyectos rentables
+    - cómo sé si voy a ganar plata con esto
+    - pa' saber si el negocio jala
+    - mi idea va a dar dinero o no
+    - quiero saber si voy a recuperar lo que pongo
+
+- intent: calculo_retorno_inversion
+  examples: |
+    - cuándo voy a recuperar mi dinero
+    - no sé cuánto tiempo estaré sin ganancias
+    - quiero saber cuándo empezaré a ganar
+    - me preocupa el tiempo para ver retorno
+    - cuánto debo esperar para recuperar
+    - no tengo claro el tiempo de retorno
+    - cuándo dejaré de estar en rojo
+    - necesito saber el plazo para ver ganancias
+    - cómo calcular cuándo recuperaré mi inversión
+    - qué tiempo tomará ver retorno
+    - cómo estimar el período de recuperación
+    - qué considerar para calcular retorno
+    - cómo saber cuánto esperar para ganar
+    - qué método para calcular recuperación
+    - cómo prever el tiempo hasta rentabilidad
+    - qué pasos para estimar retorno
+    - cálculo de período de recuperación
+    - payback period de inversión
+    - tiempo de retorno de capital
+    - análisis de recuperación de inversión
+    - cuándo voy a ver la plata de vuelta
+    - pa' saber cuánto tardo en recuperar
+    - cómo calculo cuándo empiezo a ganar
+    - cuánto tiempo pa' que rinda lo que puse
+
+
+- intent: distribucion_dinero_negocio
+  examples: |
+    - no sé cómo repartir mi capital
+    - tengo dinero pero no sé en qué usarlo
+    - cómo priorizar mis gastos de negocio
+    - no sé dónde poner mi dinero disponible
+    - tengo varias necesidades y recursos limitados
+    - cómo asignar mi presupuesto mensual
+    - no decido en qué invertir primero
+    - cómo balancear diferentes áreas con poco dinero
+    - cómo distribuir mi capital inicial
+    - qué porcentaje para cada área del negocio
+    - cómo asignar mi presupuesto eficientemente
+    - qué priorizar al repartir recursos
+    - cómo decidir dónde poner el dinero
+    - qué sistema para distribución de capital
+    - cómo optimizar el uso de mi dinero
+    - qué considerar al repartir recursos
+    - asignación de capital empresarial
+    - distribución de recursos financieros
+    - presupuesto por áreas funcionales
+    - optimización de asignación de capital
+    - cómo reparto la plata del negocio
+    - pa' saber dónde meter la harina
+    - tengo reales pero no sé en qué usarlos
+    - cómo le hago para que la plata rinda
+
+- intent: sistemas_control_stock
+  examples: |
+    - no tengo control de mis productos
+    - pierdo mercancía porque no sé qué tengo
+    - mi inventario está desorganizado
+    - no sé qué productos me quedan
+    - tengo problemas para manejar mis existencias
+    - no controlo bien lo que entra y sale
+    - mi almacén es un desorden
+    - necesito orden en mis productos
+    - qué sistema usar para control de inventario
+    - cómo llevar control de mi mercancía
+    - qué método para manejar stock
+    - cómo organizar mis productos eficientemente
+    - qué herramientas para control de inventario
+    - cómo implementar sistema de stock
+    - qué considerar para controlar productos
+    - cómo empezar a controlar mi inventario
+    - sistemas de gestión de inventarios
+    - control de stock para PYMES
+    - métodos de gestión de almacén
+    - sistemas de registro de existencias
+    - cómo controlo lo que tengo para vender
+    - pa' no perder la mercancía
+    - mi inventario está como arroz con mango
+    - cómo le hago para saber qué tengo
+
+
+- intent: problemas_exceso_falta_stock
+  examples: |
+    - tengo productos que no se venden
+    - me falta lo que la gente pide
+    - mucho dinero atrapado en inventario
+    - pierdo ventas por no tener productos
+    - tengo exceso de algunas cosas
+    - falta de otras
+    - no sé equilibrar mi inventario
+    - unos productos se acumulan, otros faltan
+    - cómo evitar tener mucho inventario que no se vende
+    - qué hacer para no quedarme sin productos
+    - cómo equilibrar mi stock
+    - qué método para evitar excesos y faltantes
+    - cómo saber cuánto comprar de cada producto
+    - qué hacer con inventario que no se mueve
+    - cómo prever lo que necesitaré
+    - qué sistema para balancear inventario
+    - gestión de inventario óptimo
+    - equilibrio stock-out vs sobrestock
+    - rotación de inventario eficiente
+    - control de niveles de reposición
+    - tengo mucha mercancía parada
+    - me falta lo que jala
+    - cómo equilibrio lo que tengo
+    - unos productos jalan, otros no
+
+- intent: reduccion_costos_fijos
+  examples: |
+    - mis gastos fijos son muy altos
+    - necesito bajar lo que pago cada mes
+    - mis gastos mensuales me ahogan
+    - quiero hacer mi negocio más flexible
+    - pago mucho en cosas fijas
+    - necesito reducir mis obligaciones mensuales
+    - mis gastos recurrentes son un problema
+    - quiero menos presión de pagos fijos
+    - cómo reducir mis gastos fijos
+    - qué estrategias para bajar costos mensuales
+    - cómo hacer mi negocio menos rígido
+    - qué gastos fijos puedo eliminar
+    - cómo negociar mis gastos recurrentes
+    - qué alternativas a gastos fijos altos
+    - cómo optimizar mis pagos mensuales
+    - qué hacer para gastar menos cada mes
+    - reducción de costos operativos fijos
+    - optimización de estructura de costos
+    - estrategias de flexibilización empresarial
+    - disminución de gastos periódicos
+    - cómo bajo lo que pago sí o sí
+    - mis gastos fijos me están matando
+    - pa' gastar menos cada mes
+    - cómo hago para que me cueste menos mantenerlo
+
+- intent: control_inventario_detallado
+  examples: |
+    - cómo aplico el método [fifo]{"entity": "actividad_especifica", "value": "fifo"}
+    - qué es la [clasificación abc]{"entity": "actividad_especifica", "value": "clasificacion_abc"}
+    - cómo valoro mi inventario
+    - métodos de [costo promedio]{"entity": "actividad_especifica", "value": "costo_promedio"}
+    - cómo controlar mi stock de productos
+    - qué es la trazabilidad en el inventario
+    - sistema de gestión de inventario
+    - cómo gestionar mi stock
+    - sistema de inventario
+    - control inventario
+    - gestión stock
+    - método fifo
+    - clasificación abc
+    - valoración inventario
+    - sistemas de control de inventario
+    - métodos para gestionar inventarios
+    - control de stock eficiente
+
+- intent: negociacion_condiciones_proveedores
+  examples: |
+    - mis proveedores no me dan buen trato
+    - necesito mejores condiciones de pago
+    - pago muy caro a mis proveedores
+    - no tengo flexibilidad con mis proveedores
+    - las condiciones de compra son muy duras
+    - quiero negociar mejor con mis proveedores
+    - me presionan para pagar rápido
+    - no consigo buenos acuerdos con proveedores
+    - cómo negociar con mis proveedores
+    - qué estrategias para mejorar condiciones
+    - cómo conseguir mejores precios
+    - qué técnicas de negociación usar
+    - cómo pedir plazos más largos
+    - qué argumentos usar con proveedores
+    - cómo conseguir descuentos
+    - qué hacer para negociar exitosamente
+    - estrategias de negociación con proveedores
+    - mejora de condiciones comerciales
+    - técnicas de compra negociada
+    - gestión de relaciones con proveedores
+    - cómo le gano a mis proveedores
+    - pa' que me den mejor precio
+    - cómo hago para que me flexibilicen
+    - quiero mejorar lo que me ofrecen
+
+- intent: sistemas_registro_operaciones
+  examples: |
+    - no registro bien mis ventas y compras
+    - pierdo información de mis operaciones
+    - mis registros están desorganizados
+    - no sé cómo anotar mis movimientos diarios
+    - tengo problemas para llevar control
+    - la información se me pierde
+    - no tengo orden en mis registros
+    - necesito sistema para anotar operaciones
+    - qué sistema usar para registrar ventas
+    - cómo llevar control de mis operaciones
+    - qué método para registrar compras y ventas
+    - cómo organizar mis registros diarios
+    - qué herramientas para registrar movimientos
+    - cómo implementar sistema de registro
+    - qué considerar para registrar operaciones
+    - cómo empezar a registrar correctamente
+    - sistemas de registro contable básico
+    - control de operaciones comerciales
+    - métodos de registro de transacciones
+    - sistemas de documentación empresarial
+    - cómo registro lo que vendo y compro
+    - pa' no perder la info de movimientos
+    - mis anotaciones están desordenadas
+    - cómo le hago para llevar control diario
+
+- intent: facturacion_legal_venezuela
+  examples: |
+    - no sé cómo facturar legalmente
+    - me preocupan las multas por facturas
+    - necesito facturar correctamente al SENIAT
+    - no entiendo lo de facturación electrónica
+    - mis clientes me piden facturas legales
+    - no quiero problemas con mis facturas
+    - necesito aprender a facturar bien
+    - tengo dudas sobre facturación legal
+    - cómo hacer una factura legal en Venezuela
+    - qué debe tener una factura válida
+    - cómo facturar electrónicamente
+    - qué necesito para facturar legalmente
+    - cómo cumplir con facturación del SENIAT
+    - qué sistema usar para facturar
+    - cómo empezar a facturar correctamente
+    - qué pasos para facturación legal
+    - facturación electrónica en Venezuela
+    - requisitos de facturas fiscales
+    - sistema de facturación del SENIAT
+    - documentación legal para facturar
+    - cómo facturo pa' no tener problemas
+    - pa' hacer facturas legales qué necesito
+    - cómo le hago con el SENIAT y facturas
+    - quiero facturar bien pa' que no me multen
+
+- intent: estrategias_reduccion_gastos
+  examples: |
+    - mis gastos son muy altos
+    - necesito gastar menos en mi negocio
+    - quiero reducir mis costos operativos
+    - mis márgenes son muy ajustados
+    - gasto demasiado en cosas innecesarias
+    - necesito ahorrar en mi operación
+    - mis costos me comen las ganancias
+    - quiero mejorar mis márgenes gastando menos
+    - cómo reducir mis gastos empresariales
+    - qué estrategias para gastar menos
+    - cómo ahorrar en costos operativos
+    - qué áreas donde puedo reducir gastos
+    - cómo identificar gastos innecesarios
+    - qué métodos para reducción de costos
+    - cómo optimizar mis gastos mensuales
+    - qué pasos para reducir costos
+    - estrategias de reducción de costos
+    - optimización de gastos operativos
+    - métodos de ahorro empresarial
+    - técnicas de reducción de costos
+    - cómo gasto menos en el negocio
+    - pa' ahorrar en lo que gasto
+    - mis gastos están muy altos, cómo bajo
+    - quiero que me cueste menos operar
+
+
+- intent: eficiencia_operativa_negocio
+  examples: |
+    - mis procesos son lentos e ineficientes
+    - pierdo mucho tiempo en tareas repetitivas
+    - quiero hacer más con lo que tengo
+    - mi negocio no es productivo
+    - necesito optimizar mis operaciones
+    - hago las cosas de forma complicada
+    - mis métodos son anticuados
+    - quiero ser más eficiente en mi trabajo
+    - cómo hacer mi negocio más eficiente
+    - qué estrategias para mejorar productividad
+    - cómo optimizar mis procesos operativos
+    - qué métodos para mayor eficiencia
+    - cómo hacer más con menos recursos
+    - qué sistemas para mejorar operaciones
+    - cómo aumentar mi productividad
+    - qué pasos para ser más eficiente
+    - mejora de eficiencia operativa
+    - optimización de procesos empresariales
+    - aumento de productividad operacional
+    - sistemas de eficiencia empresarial
+    - cómo hago que mi negocio rinda más
+    - pa' ser más eficiente en lo que hago
+    - mis procesos jalan lento, cómo mejoro
+    - quiero hacer más sin gastar más
+
+- intent: terminologia_financiera_basica
+  examples: |
+    - no entiendo los términos financieros
+    - la jerga financiera me confunde
+    - necesito explicaciones simples de finanzas
+    - los conceptos financieros son complicados
+    - no sé qué significan muchos términos
+    - me pierdo con el lenguaje financiero
+    - quiero aprender finanzas en palabras simples
+    - necesito entender conceptos básicos
+    - qué significa [término financiero]
+    - cómo explicar conceptos financieros simples
+    - qué necesito entender de finanzas básicas
+    - cómo aprender terminología financiera
+    - qué conceptos son esenciales entender
+    - cómo traducir jerga financiera a simple
+    - qué términos financieros debo conocer
+    - cómo entender finanzas sin complicaciones
+    - explicación de ROI para emprendedores
+    - qué es el flujo de caja en palabras simples
+    - significado de margen de ganancia
+    - definición de capital de trabajo
+    - qué quiere decir eso de [término]
+    - pa' entender la jerga financiera
+    - cómo le explico esto en criollo
+    - qué significa eso en palabras normales
+
+- intent: indicadores_rendimiento_negocio
+  examples: |
+    - no sé cómo me está yendo realmente
+    - necesito medir el desempeño de mi negocio
+    - no tengo métricas para evaluar progreso
+    - quiero saber objetivamente si voy bien
+    - no sé qué números seguir
+    - necesito indicadores para tomar decisiones
+    - no mido bien mi rendimiento
+    - quiero evaluar mi negocio con números
+    - qué indicadores usar para mi negocio
+    - cómo medir el desempeño empresarial
+    - qué métricas son importantes seguir
+    - cómo evaluar si voy por buen camino
+    - qué números debo monitorear regularmente
+    - qué KPIs para pequeñas empresas
+    - cómo crear indicadores de rendimiento
+    - qué medir para tomar mejores decisiones
+    - KPIs para emprendedores venezolanos
+    - indicadores clave de desempeño
+    - métricas de rendimiento empresarial
+    - medición de resultados comerciales
+    - cómo sé si mi negocio está jalando
+    - pa' medir cómo me va realmente
+    - qué números mirar pa' saber si voy bien
+    - cómo evalúo si estoy ganando o perdiendo
+
+- intent: cultura_ahorro_detallada
+  examples: |
+    - cómo ahorrar en venezuela
+    - [en qué invertir mi dinero]{"entity": "actividad_especifica", "value": "en_que_invertir_mi_dinero"}
+    - cómo proteger mi dinero de la inflación
+    - cultura de ahorro en venezuela
+    - cómo hacer que mi dinero crezca
+    - ahorro en bolívares
+    - proteger el valor de mi dinero
+    - dónde investir en venezuela
+    - cultura ahorro
+    - ahorro inversión
+    - proteger dinero
+    - inversión venezuela
+    - ahorro empresarial
+    - estrategias de ahorro en venezuela
+    - cómo proteger el capital en inflación
+    - métodos de ahorro efectivos
+
+- intent: ejemplos_practicos_detallados
+  examples: |
+    - dame un ejemplo de [pricing dual]{"entity": "actividad_especifica", "value": "pricing_dual"}
+    - cómo separo el [iva]{"entity": "actividad_especifica", "value": "iva"} en una venta
+    - ejemplo de cálculo de [salario integral]{"entity": "actividad_especifica", "value": "salario_integral"}
+    - caso práctico de [punto de equilibrio]{"entity": "actividad_especifica", "value": "punto_equilibrio"}
+    - ejemplo de [clasificación abc]{"entity": "actividad_especifica", "value": "clasificacion_abc"}
+    - ejemplos de contratos
+    - cómo se calcula el iva
+    - ejemplos prácticos
+    - casos prácticos
+    - ejemplos cálculo
+    - ejercicios prácticos
+    - ejemplos reales
+    - necesito ejemplos prácticos concretos
+    - muéstrame casos reales venezolanos
+    - ejemplos con números reales
+    
+
+- intent: estrategia_planificacion_general
+  examples: |
+    - por dónde debo empezar con mi negocio
+    - qué negocio me recomiendas montar en venezuela
+    - cómo puedo hacer crecer mi emprendimiento
+    - qué estrategias funcionan en la economía actual
+    - cómo puedo hacer mi negocio más rentable
+    - qué debo considerar antes de invertir
+    - cómo adapto mi negocio a los cambios económicos
+    - qué oportunidades de negocio ves actualmente
+    - cuál es el mejor negocio para empezar
+    - qué emprendimiento es más viable hoy
+    - por donde comienzo mi emprendimiento
+    - qué negocio poner en venezuela
+    - cómo empiezo un negocio exitoso
+    - qué funciona en la economía venezolana
+    - cómo hago mi empresa más rentable
+    - qué evaluar antes de invertir dinero
+    - cómo ajustar mi negocio a la situación actual
+    - qué negocios tienen futuro en venezuela
+    - cuál es la mejor idea de negocio para comenzar
+    - qué negocio es más sostenible actualmente
+
+- intent: inversiones_financiamiento_general
+  examples: |
+    - en qué me recomiendas invertir mi capital
+    - cómo puedo conseguir financiamiento
+    - qué inversiones son más seguras ahora
+    - cómo protejo mi dinero de la inflación
+    - qué hacer con mis ahorros en este momento
+    - es buen momento para invertir
+    - cómo diversifico mis inversiones
+    - dónde pongo mi dinero para que crezca
+    - qué negocios dan más ganancias
+    - cómo hago rendir mi capital
+    - en qué invertir mi dinero en venezuela
+    - dónde conseguir financiamiento para mi negocio
+    - qué inversiones tienen menos riesgo
+    - cómo proteger mi capital de la devaluación
+    - qué hago con mis ahorros ahora
+    - está bien el momento para invertir
+    - cómo reparto mi dinero en diferentes inversiones
+    - dónde invertir para que el dinero crezca
+    - qué negocios generan más utilidades
+    - cómo maximizar el rendimiento de mi capital
+
+
+
+- intent: analisis_decisiones_general
+  examples: |
+    - crees que mi idea de negocio es buena
+    - cómo sé si mi negocio será exitoso
+    - qué debo analizar antes de empezar
+    - cómo evalúo la competencia
+    - qué factores determinan el éxito
+    - es rentable mi idea de negocio
+    - vale la pena este negocio
+    - cómo saber si voy por buen camino
+    - mi idea de negocio es viable
+    - cómo predecir el éxito de mi emprendimiento
+    - qué estudiar antes de lanzar mi negocio
+    - cómo analizar a mis competidores
+    - qué hace exitoso a un negocio
+    - mi idea generará ganancias
+    - este negocio merece la inversión
+    - cómo medir si mi negocio va bien
+    - es buena mi propuesta de negocio
+    - cómo asegurar el éxito empresarial
+    - qué investigar antes de emprender
+    - cómo compararme con la competencia
+
+- intent: problemas_soluciones_general
+  examples: |
+    - qué hago si mi negocio no genera ganancias
+    - cómo aumento mis ventas
+    - qué hacer cuando tengo problemas de flujo de caja
+    - cómo reduzco costos sin afectar calidad
+    - qué estrategias uso para retener clientes
+    - mi negocio no funciona qué hago
+    - cómo reactivar un negocio estancado
+    - por qué no tengo clientes
+    - mi empresa no da ganancias qué hacer
+    - cómo incrementar las ventas de mi negocio
+    - qué hacer con crisis de liquidez
+    - cómo bajar gastos sin bajar calidad
+    - cómo mantener a mis clientes contentos
+    - mi emprendimiento no marcha bien
+    - cómo revivir un negocio que no crece
+    - por qué no llegan clientes a mi local
+    - el negocio no produce utilidades
+    - estrategias para vender más
+    - solución para falta de efectivo
+    - métodos para reducir costos inteligentemente
+
+- intent: orientacion_legal_general
+  examples: |
+    - qué trámites necesito hacer primero
+    - cómo me formalizo correctamente
+    - qué obligaciones legales tengo
+    - qué pasa si opero informalmente
+    - cuál es el proceso completo de formalización
+    - por dónde empiezo con los papeles
+    - es complicado formalizarse
+    - qué documentos necesito para empezar
+    - cómo hacer todo legalmente correcto
+    - qué exigencias legales debo cumplir
+    - consecuencias de trabajar informal
+    - pasos completos para formalizar mi empresa
+    - por donde inicio los trámites legales
+    - es difícil el proceso de formalización
+    - qué permisos requiero inicialmente
+    - cómo establecer mi negocio legalmente
+    - qué responsabilidades legales tengo
+    - riesgos de operar sin papeles
+    - proceso integral de legalización
+
+- intent: finanzas_contabilidad_general
+  examples: |
+    - cómo organizo las finanzas de mi negocio
+    - qué impuestos debo pagar
+    - cómo llevo mi contabilidad
+    - qué es el flujo de caja y por qué es importante
+    - cómo calculo mis precios correctamente
+    - cómo manejo el dinero de mi negocio
+    - qué registros debo llevar
+    - cómo administrar las finanzas empresariales
+    - qué tributos debo cancelar
+    - cómo mantener mi contabilidad en orden
+    - importancia del flujo de caja en el negocio
+    - cómo establecer precios adecuados
+    - cómo gestionar el capital de mi empresa
+    - qué libros y registros son obligatorios
+    - organización financiera de mi emprendimiento
+    - obligaciones tributarias básicas
+    - sistema contable para mi negocio
+    - definición y relevancia del cash flow
+    - metodología para fijar precios
+    - manejo del efectivo en la empresa
+
+- intent: operaciones_gestion_general
+  examples: |
+    - cómo manejo mi inventario eficientemente
+    - qué sistema de inventario me recomiendas
+    - cómo elijo buenos proveedores
+    - cómo optimizo mis procesos operativos
+    - cómo hago que mi negocio funcione mejor
+    - cómo mejoro la operación de mi empresa
+    - gestión eficiente de inventarios
+    - qué método de control de inventario usar
+    - cómo seleccionar proveedores confiables
+    - cómo hacer más eficientes mis operaciones
+    - cómo optimizar el funcionamiento del negocio
+    - mejoras operativas para mi empresa
+    - administración efectiva del stock
+    - sistemas recomendados para inventario
+    - criterios para elegir proveedores
+    - eficiencia en procesos operacionales
+    - cómo hacer que la empresa opere mejor
+    - optimización de la operación empresarial
+
+- intent: recursos_humanos_basico
+  examples: |
+    - cuándo debo contratar personal
+    - qué obligaciones tengo con mis empleados
+    - qué beneficios debo ofrecer
+    - es momento de contratar ayuda
+    - cuándo necesito contratar empleados
+    - qué debo cumplir con mis trabajadores
+    - cómo determinar el salario completo
+    - qué prestaciones debo dar
+    - ya debo contratar personal adicional
+    - momento adecuado para contratar staff
+    - responsabilidades legales con empleados
+    - cálculo del salario total legal
+    - beneficios obligatorios para trabajadores
+    - señales para contratar ayuda
+    - cuándo expandir la plantilla
+    - obligaciones laborales básicas
+    - fórmula del salario integral
+    - compensaciones que debo ofrecer
+
+- intent: marketing_ventas_general
+  examples: |
+    - cómo promociono mi negocio con poco presupuesto
+    - qué estrategias de marketing funcionan en venezuela
+    - cómo aumento mi clientela
+    - qué redes sociales debo usar para mi negocio
+    - cómo consigo más clientes
+    - cómo doy a conocer mi negocio
+    - publicidad económica para mi empresa
+    - técnicas de marketing efectivas en venezuela
+    - cómo atraer más clientes
+    - qué plataformas digitales usar
+    - métodos para conseguir clientes nuevos
+    - cómo promocionar mi emprendimiento
+    - marketing low cost para negocios
+    - estrategias comerciales que funcionan aquí
+    - cómo expandir mi base de clientes
+    - redes sociales recomendadas para empresas
+    - cómo captar más clientela
+    - dar visibilidad a mi negocio
+
+- intent: riesgos_proteccion_general
+  examples: |
+    - qué seguros necesita mi negocio
+    - cómo protejo mi patrimonio personal
+    - qué riesgos legales debo considerar
+    - cómo preparo mi negocio para crisis
+    - cómo evito problemas con mi negocio
+    - qué pólizas de seguro debo tener
+    - cómo salvaguardar mis bienes personales
+    - qué peligros legales enfrento
+    - cómo hacer mi empresa resistente a crisis
+    - cómo prevenir problemas empresariales
+    - seguros esenciales para mi compañía
+    - protección de mi patrimonio familiar
+    - riesgos jurídicos a considerar
+    - preparación para situaciones difíciles
+    - cómo evitar dificultades en el negocio
+    - coberturas de seguro necesarias
+    - resguardo de activos personales
+    - consideraciones legales de riesgo
+
+- intent: crecimiento_expansion_general
+  examples: |
+    - cuándo es el momento de expandir mi negocio
+    - cómo escalo operaciones eficientemente
+    - qué debo considerar al abrir una segunda ubicación
+    - cómo hago crecer mi empresa
+    - mi negocio está listo para expandirse
+    - cuándo debo ampliar mi empresa
+    - cómo aumentar operaciones sin perder eficiencia
+    - qué evaluar al abrir nueva sucursal
+    - estrategias para hacer crecer mi compañía
+    - señales de que puedo expandirme
+    - momento adecuado para crecimiento
+    - escalamiento eficaz de operaciones
+    - factores al abrir segundo local
+    - cómo lograr crecimiento empresarial
+    - indicadores para expansión
+    - cuándo crecer el negocio
+    - metodología para escalar operaciones
+    - consideraciones para nueva ubicación
+
+- intent: tecnologia_digitalizacion_general
+  examples: |
+    - qué herramientas digitales necesita mi negocio
+    - cómo implemento un sistema de facturación electrónica
+    - qué ventajas tiene tener presencia online
+    - cómo vendo por internet
+    - cómo digitalizo mi negocio
+    - qué software necesita mi empresa
+    - cómo adoptar facturación digital
+    - beneficios de estar en internet
+    - cómo comercializar productos online
+    - proceso de digitalización empresarial
+    - herramientas tecnológicas esenciales
+    - implementación de factura electrónica
+    - ventajas de presencia digital
+    - métodos para vender por internet
+    - transformación digital de mi negocio
+    - aplicaciones necesarias para empresas
+    - migración a facturación electrónica
+    - importancia del comercio online
+
+- intent: educacion_capacitacion_general
+  examples: |
+    - qué habilidades necesito desarrollar
+    - dónde puedo capacitarme como emprendedor
+    - qué libros o cursos me recomiendas
+    - cómo mejoro mis conocimientos financieros
+    - qué debo aprender para emprender
+    - qué competencias debo fortalecer
+    - dónde formarme como empresario
+    - qué literatura o capacitación recomiendas
+    - cómo ampliar mi educación financiera
+    - conocimientos esenciales para emprender
+    - habilidades clave a desarrollar
+    - centros de capacitación para emprendedores
+    - recomendaciones de libros y cursos
+    - mejora de cultura financiera
+    - aprendizaje fundamental para negocios
+    - capacidades necesarias para el éxito
+
+- intent: preguntas_especificas_inversion
+  examples: |
+    - es mejor invertir en bienes raíces o en un negocio
+    - qué sectores tienen más crecimiento potencial
+    - cómo invierto en dólares de forma segura
+    - es buena idea invertir en criptomonedas
+    - qué negocios son más resistentes a la inflación
+    - cómo evalúo el riesgo de una inversión
+    - qué porcentaje de mi capital debo invertir
+    - cuándo espero retornos de mi inversión
+    - qué indicadores debo monitorear
+    - cómo balanceo riesgo y rentabilidad
+    - inversión en propiedades vs negocio propio
+    - qué industrias tienen mayor potencial
+    - métodos seguros para invertir en dólares
+    - conveniencia de invertir en cripto
+    - negocios antiinflacionarios
+    - cómo medir el riesgo inversor
+    - cuánto de mi dinero destinar a inversión
+    - tiempo esperado para ver ganancias
+    - métricas clave a seguir
+    - equilibrio entre riesgo y ganancia
+
+- intent: expresiones_coloquiales_venezolanas
+  examples: |
+    - qué me recomiendas pa' hacer plata
+    - en qué invierto los reales
+    - cómo le saco provecho a la harina
+    - qué negocio rinde más
+    - cómo hago para que el negocio camine
+    - qué chimbo recomiendas para emprender
+    - cómo le echo bolas al negocio
+    - qué me sugieres para generar dinero
+    - en qué pongo la plata
+    - cómo aprovecho el capital
+    - qué empresa da más ganancia
+    - cómo hago que el emprendimiento funcione
+    - qué pequeño negocio recomiendas
+    - cómo le pongo empeño al proyecto
+    - cómo hacer dinero rápido
+    - dónde meter los bolívares
+    - cómo usar la plata inteligentemente
+    - qué comercio deja más
+    - cómo lograr que marche el negocio
+    - qué pequeño emprendimiento sugerir
+
+- intent: out_of_scope
+  examples: |
+    - cómo está el clima
+    - quién ganó el último partido del béisbol
+    - cuál es la receta de las arepas
+    - dime un chiste
+    - cuál es tu opinión sobre política
+    - recomiéndame una película
+    - cuántos años tienes
+    - eres un robot
+    - tienes nombre
+    - cuéntame un cuento
+    - cómo está el dólar hoy
+    - qué hora es
+    - dónde vives
+    - quién es el presidente
+    - cómo te llamas
+    - qué puedes hacer
+    - cuéntame de ti
+    - cómo está el tiempo
+    - qué día es hoy
+    - cuál es tu color favorito
+
+- intent: nlu_fallback
+  examples: |
+    - asdfghjkl
+    - 123456
+    - qwerty
+    - zxcvbnm
+    - ...
+    - ????
+    - !!!!
+    - jdkslafj
+    - akdsjfla
+    - alskdfj
+
+- lookup: municipio
+  examples: |
+    - chacao
+    - baruta
+    - sucre
+    - libertador
+    - el hatillo
+    - maracaibo
+    - valencia
+    - barquisimeto
+    - maracay
+    - san cristóbal
+    - cabimas
+    - maturín
+
+- lookup: tipo_empresa
+  examples: |
+    - compañía anónima
+    - c.a.
+    - sociedad de responsabilidad limitada
+    - s.r.l.
+    - firma personal
+    - empresa de responsabilidad limitada
+    - persona natural
+
+- lookup: tipo_negocio
+  examples: |
+    - comercio
+    - servicios
+    - manufactura
+    - alimentos
+    - tecnología
+    - consultoría
+    - construcción
+    - salud
+
+- synonym: C.A.
+  examples: |
+    - compañía anónima
+    - ca
+    - compañia anonima
+
+- synonym: S.R.L.
+  examples: |
+    - sociedad de responsabilidad limitada
+    - srl
+    - empresa de responsabilidad limitada
+
+- synonym: SAREN
+  examples: |
+    - registro mercantil
+    - registro de comercio
+    - servicio autónomo de registros y notarías
+
+- synonym: SENIAT
+  examples: |
+    - seniat
+    - servicio nacional integrado de administración aduanera y tributaria
+
+- synonym: SAPI
+  examples: |
+    - sapi
+    - servicio autónomo de la propiedad intelectual
+
+- regex: monto
+  examples: |
+    - \d{1,5}(?:[.,]?\d{3})*(?:[.,]\d{2})?

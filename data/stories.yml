@@ -1,0 +1,405 @@
+# stories.yml (Versión FINAL corregida)
+
+version: "3.1"
+
+stories:
+
+# --- HISTORIAS SIMPLES PARA PREGUNTAS DIRECTAS (Q&A) ---
+
+- story: User greets
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+
+- story: User says goodbye
+  steps:
+    - intent: despedirse
+    - action: utter_despedirse
+
+- story: User thanks
+  steps:
+    - intent: agradecer
+    - action: utter_agradecer
+
+# AGREGADO: Historias para afirmar/negar que SÍ existen en el dominio
+- story: User confirms
+  steps:
+    - intent: afirmar
+    - action: utter_afirmar
+
+- story: User denies
+  steps:
+    - intent: negar
+    - action: utter_negar
+
+
+# NOTA: registro_empresa_detallado debe ser agregado al domain.yml
+- story: User asks about company registration
+  steps:
+    - intent: registro_empresa_detallado
+    - action: utter_registro_empresa_detallado
+
+- story: User asks about financial plan
+  steps:
+    - intent: plan_financiero_detallado
+    - action: utter_plan_financiero_detallado
+
+- story: User asks about RIF
+  steps:
+    - intent: obtener_rif_detallado
+    - action: utter_obtener_rif_detallado
+
+- story: User asks about intellectual property
+  steps:
+    - intent: propiedad_intelectual_detallada
+    - action: utter_propiedad_intelectual_detallada
+
+- story: User asks about tax documents
+  steps:
+    - intent: documentos_tributarios_detallados
+    - action: utter_documentos_tributarios_detallados
+
+- story: User asks about legal concepts
+  steps:
+    - intent: conceptos_legales_detallados
+    - action: utter_conceptos_legales_detallados
+
+- story: User asks about tax obligations
+  steps:
+    - intent: obligaciones_tributarias_detalladas
+    - action: utter_obligaciones_tributarias_detalladas
+
+- story: User asks about labor obligations
+  steps:
+    - intent: obligaciones_laborales_detalladas
+    - action: utter_obligaciones_laborales_detalladas
+
+- story: User asks about benefits of formality
+  steps:
+    - intent: beneficios_formalidad_detallados
+    - action: utter_beneficios_formalidad_detallados
+
+- story: User asks about break-even point
+  steps:
+    - intent: punto_equilibrio_detallado
+    - action: utter_punto_equilibrio_detallado
+
+- story: User asks about company type comparison
+  steps:
+    - intent: tipos_empresa_comparacion
+    - action: utter_tipos_empresa_comparacion
+
+# --- HISTORIAS PARA INTENTS DE SOLICITUD ---
+
+- story: User requests detailed explanation
+  steps:
+    - intent: solicitar_explicacion_detallada
+    - action: utter_solicitar_explicacion_detallada
+
+- story: User requests practical example
+  steps:
+    - intent: solicitar_ejemplo_practico
+    - action: utter_solicitar_ejemplo_practico
+
+- story: User requests comparison
+  steps:
+    - intent: solicitar_comparacion
+    - action: utter_solicitar_comparacion
+
+- story: User requests specific requirements
+  steps:
+    - intent: solicitar_requisitos_especificos
+    - action: utter_solicitar_requisitos_especificos
+
+- story: User requests costs and times
+  steps:
+    - intent: solicitar_costos_tiempos
+    - action: utter_solicitar_costos_tiempos
+
+- story: User requests process steps
+  steps:
+    - intent: solicitar_pasos_proceso
+    - action: utter_solicitar_pasos_proceso
+
+- story: User requests directions and contacts
+  steps:
+    - intent: solicitar_direcciones_contacto
+    - action: utter_solicitar_direcciones_contacto
+
+# --- HISTORIAS PARA NEGOCIO INICIAL ---
+- story: User wants to start business from scratch
+  steps:
+    - intent: comenzar_negocio
+    - action: utter_comenzar_negocio
+
+- story: User wants to formalize existing business
+  steps:
+    - intent: formalizar_negocio
+    - action: utter_formalizar_negocio
+
+- story: User asks about capital investment options
+  steps:
+    - intent: inversion_capital
+    - action: utter_inversion_capital
+
+- story: User asks about municipal patent
+  steps:
+    - intent: permiso_patente_municipal
+    - action: utter_permiso_patente_municipal
+
+- story: User asks about use conformity certificate
+  steps:
+    - intent: conformidad_uso_local
+    - action: utter_conformidad_uso_local
+
+- story: User asks about fire department certificate
+  steps:
+    - intent: certificado_bomberos
+    - action: utter_certificado_bomberos
+
+- story: User asks about food sanitary permit
+  steps:
+    - intent: permiso_sanitario_alimentos
+    - action: utter_permiso_sanitario_alimentos
+
+- story: User asks about INPSASEL registration
+  steps:
+    - intent: registro_inpsasel
+    - action: utter_registro_inpsasel
+
+- story: User asks about basic labor contract
+  steps:
+    - intent: contrato_laboral_basico
+    - action: utter_contrato_laboral_basico
+
+- story: User asks about commercial lease contract
+  steps:
+    - intent: contrato_arrendamiento_local
+    - action: utter_contrato_arrendamiento_local
+
+- story: User asks about articles of incorporation definition
+  steps:
+    - intent: acta_constitutiva_definicion
+    - action: utter_acta_constitutiva_definicion
+
+# --- HISTORIAS AGREGADAS PARA LOS INTENTS QUE ESTÁN EN EL DOMINIO ---
+# Esto evita los warnings de "intent not used in any story"
+
+- story: User asks about business expenses classification
+  steps:
+    - intent: clasificacion_gastos_negocio
+    - action: utter_clasificacion_gastos_negocio
+
+- story: User asks about monthly constant expenses
+  steps:
+    - intent: gastos_constantes_mes
+    - action: utter_gastos_constantes_mes
+
+- story: User asks about sales proportional expenses
+  steps:
+    - intent: gastos_proporcionales_ventas
+    - action: utter_gastos_proporcionales_ventas
+
+- story: User needs cash control
+  steps:
+    - intent: control_dinero_efectivo
+    - action: utter_control_dinero_efectivo
+
+- story: User needs income/expense projection
+  steps:
+    - intent: proyeccion_entradas_salidas
+    - action: utter_proyeccion_entradas_salidas
+
+- story: User needs business emergency fund
+  steps:
+    - intent: reserva_emergencia_negocio
+    - action: utter_reserva_emergencia_negocio
+
+- story: User asks about business loan options
+  steps:
+    - intent: opciones_prestamos_negocio
+    - action: utter_opciones_prestamos_negocio
+
+- story: User asks about self-financing growth
+  steps:
+    - intent: autofinanciamiento_crecimiento
+    - action: utter_autofinanciamiento_crecimiento
+
+- story: User asks about non-bank credit alternatives
+  steps:
+    - intent: alternativas_credito_bancario
+    - action: utter_alternativas_credito_bancario
+
+- story: User needs profitability evaluation
+  steps:
+    - intent: evaluacion_rentabilidad_proyecto
+    - action: utter_evaluacion_rentabilidad_proyecto
+
+- story: User needs ROI calculation
+  steps:
+    - intent: calculo_retorno_inversion
+    - action: utter_calculo_retorno_inversion
+
+- story: User needs money distribution for business
+  steps:
+    - intent: distribucion_dinero_negocio
+    - action: utter_distribucion_dinero_negocio
+
+- story: User wants to reduce fixed costs
+  steps:
+    - intent: reduccion_costos_fijos
+    - action: utter_reduccion_costos_fijos
+
+- story: User needs inventory control systems
+  steps:
+    - intent: sistemas_control_stock
+    - action: utter_sistemas_control_stock
+
+- story: User has inventory balance problems
+  steps:
+    - intent: problemas_exceso_falta_stock
+    - action: utter_problemas_exceso_falta_stock
+
+- story: User needs supplier negotiation
+  steps:
+    - intent: negociacion_condiciones_proveedores
+    - action: utter_negociacion_condiciones_proveedores
+
+- story: User needs operations recording systems
+  steps:
+    - intent: sistemas_registro_operaciones
+    - action: utter_sistemas_registro_operaciones
+
+- story: User needs legal invoicing info
+  steps:
+    - intent: facturacion_legal_venezuela
+    - action: utter_facturacion_legal_venezuela
+
+- story: User needs expense reduction strategies
+  steps:
+    - intent: estrategias_reduccion_gastos
+    - action: utter_estrategias_reduccion_gastos
+
+- story: User needs operational efficiency
+  steps:
+    - intent: eficiencia_operativa_negocio
+    - action: utter_eficiencia_operativa_negocio
+
+- story: User needs basic financial terminology
+  steps:
+    - intent: terminologia_financiera_basica
+    - action: utter_terminologia_financiera_basica
+
+- story: User needs performance indicators
+  steps:
+    - intent: indicadores_rendimiento_negocio
+    - action: utter_indicadores_rendimiento_negocio
+
+- story: User asks about inventory control details
+  steps:
+    - intent: control_inventario_detallado
+    - action: utter_control_inventario_detallado
+
+- story: User asks about savings culture
+  steps:
+    - intent: cultura_ahorro_detallada
+    - action: utter_cultura_ahorro_detallada
+
+- story: User asks for practical examples
+  steps:
+    - intent: ejemplos_practicos_detallados
+    - action: utter_ejemplos_practicos_detallados
+
+# --- HISTORIAS PARA INTENTS GENERALES ---
+
+- story: User asks about strategy and planning
+  steps:
+    - intent: estrategia_planificacion_general
+    - action: utter_estrategia_planificacion_general
+
+- story: User asks about investments and financing
+  steps:
+    - intent: inversiones_financiamiento_general
+    - action: utter_inversiones_financiamiento_general
+
+- story: User asks specific investment questions
+  steps:
+    - intent: preguntas_especificas_inversion
+    - action: utter_preguntas_especificas_inversion
+
+- story: User uses Venezuelan colloquial expressions
+  steps:
+    - intent: expresiones_coloquiales_venezolanas
+    - action: utter_expresiones_coloquiales_venezolanas
+
+- story: User asks about detailed financing sources
+  steps:
+    - intent: fuentes_financiamiento_detalladas
+    - action: utter_fuentes_financiamiento_detalladas
+
+- story: User asks about analysis and decisions
+  steps:
+    - intent: analisis_decisiones_general
+    - action: utter_analisis_decisiones_general
+
+- story: User asks about problems and solutions
+  steps:
+    - intent: problemas_soluciones_general
+    - action: utter_problemas_soluciones_general
+
+- story: User asks about general legal guidance
+  steps:
+    - intent: orientacion_legal_general
+    - action: utter_orientacion_legal_general
+
+- story: User asks about finance and accounting
+  steps:
+    - intent: finanzas_contabilidad_general
+    - action: utter_finanzas_contabilidad_general
+
+- story: User asks about operations management
+  steps:
+    - intent: operaciones_gestion_general
+    - action: utter_operaciones_gestion_general
+
+- story: User asks about human resources basics
+  steps:
+    - intent: recursos_humanos_basico
+    - action: utter_recursos_humanos_basico
+
+- story: User asks about marketing and sales
+  steps:
+    - intent: marketing_ventas_general
+    - action: utter_marketing_ventas_general
+
+- story: User asks about risks and protection
+  steps:
+    - intent: riesgos_proteccion_general
+    - action: utter_riesgos_proteccion_general
+
+- story: User asks about growth and expansion
+  steps:
+    - intent: crecimiento_expansion_general
+    - action: utter_crecimiento_expansion_general
+
+- story: User asks about technology and digitalization
+  steps:
+    - intent: tecnologia_digitalizacion_general
+    - action: utter_tecnologia_digitalizacion_general
+
+- story: User asks about education and training
+  steps:
+    - intent: educacion_capacitacion_general
+    - action: utter_educacion_capacitacion_general
+
+    # stories.yml - Agrega estas stories
+- story: User sends voice message
+  steps:
+  - intent: voice_message  # Nuevo intent para voz
+  - action: action_process_telegram_voice
+  - action: utter_processing_voice
+
+- story: User requests voice response
+  steps:
+  - intent: solicitar_respuesta_voz
+  - action: action_respond_with_voice

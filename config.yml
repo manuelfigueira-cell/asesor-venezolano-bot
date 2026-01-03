@@ -1,0 +1,61 @@
+recipe: default.v1
+# En config.yml, al inicio:
+language: es
+pipeline:
+- name: SpacyNLP
+  model: "es_core_news_md"
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+
+# Características de texto
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+
+# Clasificación de intents y entidades
+- name: DIETClassifier
+  epochs: 100
+  constrain_similarities: true
+  entity_recognition: true
+  intent_classification: true
+
+# Manejo de sinónimos
+- name: EntitySynonymMapper
+
+# Selector de respuestas
+- name: ResponseSelector
+  epochs: 100
+  constrain_similarities: true
+
+# Fallback classifier
+- name: FallbackClassifier
+  threshold: 0.4
+  ambiguity_threshold: 0.1
+
+policies:
+# Política de memorización
+- name: MemoizationPolicy
+  max_history: 5
+
+# Política de reglas
+- name: RulePolicy
+  core_fallback_action_name: "action_default_fallback"
+  enable_fallback_prediction: true
+  restrict_rules: true
+
+# Política de diálogo TED
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+  constrain_similarities: true
+
+# Política para intents inesperados
+- name: UnexpecTEDIntentPolicy
+  max_history: 5
+  epochs: 100
+
+assistant_id: 20241123-emprendedor-venezolano-mejorado

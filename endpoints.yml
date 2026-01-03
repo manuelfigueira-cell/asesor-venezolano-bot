@@ -1,0 +1,40 @@
+# This file contains the different endpoints your bot can use.
+
+# Server where the models are pulled from.
+# https://rasa.com/docs/rasa/model-storage/configuration
+#models:
+#  url: http://my-server.com/models/default
+
+# Server where the models are pushed to.
+# https://rasa.com/docs/rasa/model-storage/configuration
+#production:
+#  url: http://my-production-server.com/models/default
+
+# Action server endpoint
+# https://rasa.com/docs/rasa/core/actions
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+telegram_webhook:
+  url: "https://tu-dominio.com/webhooks/telegram/webhook"
+
+# Tracker store endpoint
+# https://rasa.com/docs/rasa/tracker-stores/
+#tracker_store:
+#    type: redis
+#    url: localhost
+#    port: 6379
+#    db: 0
+#    password: ""
+#tracker_store:
+#    type: mongod
+#    url: mongodb://localhost:27017
+#    db: rasa
+
+# Event broker endpoint
+# https://rasa.com/docs/rasa/event-brokers/
+#event_broker:
+#  url: localhost
+#  username: username
+#  password: password
+#  queue: queue
